@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Send a lift complaint to DDA and Johnson Lifts for Jasola Skyline, DDA Pocket 9B.">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Pocket 9B Lift Complaints</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500&display=swap">
+</head><body>
+<style>
+:root{
+  --bg:#eef1f2; --panel:#ffffff; --ink:#1b2830; --muted:#5b6b74; --line:#d3dade;
+  --steel:#dfe5e8; --accent:#c86f00; --accent-ink:#ffffff; --led-bg:#161b1e; --led:#ff9a1f;
+  --danger:#b3261e; --ok:#1f7a4d; --paper:#fbfbf8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#12181b; --panel:#1b2327; --ink:#e6ecef; --muted:#9aabb3; --line:#2f3b41;
+    --steel:#263136; --accent:#f39a2a; --accent-ink:#1b1206; --led-bg:#0a0d0f; --led:#ffab40;
+    --danger:#f2837b; --ok:#6fd3a0; --paper:#161d20;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#12181b; --panel:#1b2327; --ink:#e6ecef; --muted:#9aabb3; --line:#2f3b41;
+  --steel:#263136; --accent:#f39a2a; --accent-ink:#1b1206; --led-bg:#0a0d0f; --led:#ffab40;
+  --danger:#f2837b; --ok:#6fd3a0; --paper:#161d20;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;padding-inline:16px;padding-block:20px 48px}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+h1{font-size:clamp(22px,3.4vw,30px);line-height:1.15;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:4px 0 0;max-width:62ch}
+.status{display:flex;align-items:center;gap:8px;background:var(--led-bg);color:var(--led);font-family:"DotGothic16",monospace;padding:8px 12px;border-radius:6px;font-size:14px;letter-spacing:.04em}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--led);box-shadow:0 0 8px var(--led);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.status i{animation:none}}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.facts li{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13.5px}
+.facts b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:2px}
+.grid{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:16px}
+.step{display:flex;flex-direction:column;gap:8px}
+.label{font-size:11.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600}
+.led{background:var(--led-bg);border-radius:8px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.led .num{font-family:"DotGothic16",monospace;font-size:44px;line-height:1;color:var(--led);text-shadow:0 0 12px color-mix(in srgb,var(--led) 55%,transparent);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.led .meta{color:#aab5bb;font-size:12.5px;text-align:right;line-height:1.35}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.btn-o{appearance:none;border:1px solid var(--line);background:var(--steel);color:var(--ink);border-radius:8px;padding:9px 6px;font:600 14px/1 "IBM Plex Sans",sans-serif;cursor:pointer;font-variant-numeric:tabular-nums}
+.btn-o:hover{border-color:var(--accent)}
+.btn-o[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.floors{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.floors .btn-o{border-radius:999px;aspect-ratio:1;padding:0;font-size:13px;max-width:100%}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:420px){.row{grid-template-columns:1fr}}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:9px 10px;width:100%}
+textarea{resize:vertical}
+.types{display:flex;flex-direction:column;gap:6px}
+.type{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:9px 11px;cursor:pointer;background:var(--paper)}
+.type input{width:auto;margin-top:3px;accent-color:var(--accent)}
+.type strong{display:block;font-size:14px}
+.type span{font-size:12.5px;color:var(--muted)}
+.type:has(input:checked){border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+.out{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
+@media (max-width:860px){.out{position:static}}
+.rcpt{display:grid;grid-template-columns:52px 1fr;gap:6px 10px;align-items:center;font-size:13px}
+.rcpt span{color:var(--muted)}
+.letter{font-family:"IBM Plex Serif",Georgia,serif;font-size:14.5px;line-height:1.6;background:var(--paper);min-height:420px}
+.subj{font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+.a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;border-radius:8px;padding:10px 14px;font:600 14px/1 "IBM Plex Sans",sans-serif;cursor:pointer;border:1px solid var(--line);background:var(--steel);color:var(--ink)}
+.a.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.a:hover{filter:brightness(1.05)}
+.hint{font-size:12.5px;color:var(--muted);margin:0}
+.toast{font-size:13px;color:var(--ok);min-height:1.2em;margin:0}
+.warn{font-size:12.5px;color:var(--danger);margin:0}
+.count{font-size:12.5px;color:var(--muted)}
+.tip{font-size:13px;background:color-mix(in srgb,var(--accent) 12%,var(--panel));border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));border-radius:8px;padding:10px 12px}
+.logbox{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;border:1px dashed var(--accent);border-radius:8px;padding:10px 12px;font-size:13.5px}
+.copies{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.copies .a{padding:7px 10px;font-size:13px}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Pocket 9B Lift Complaint Desk</h1>
+      <p class="sub">Jasola Skyline, DDA Housing Pocket 9B, Jasola. Pick your flat, choose what happened, and send a formal complaint from your own email. Each letter is worded differently so DDA receives individual complaints, not copies.</p>
+    </div>
+    <div class="status" role="status"><i></i>LIFTS FAULTY SINCE 26 SEP</div>
+  </header>
+
+  <ul class="facts" aria-label="What residents have reported">
+    <li><b>Root cause reported</b>Grid supply reaching ~480 V; lifts are rated for 450 V. No servo stabiliser installed.</li>
+    <li><b>Entrapments</b>Family stuck ~25 min (27–28 Sep, 12:00–12:25 am), no mobile network, alarm unanswered. Delivery person stuck at 1st floor, Block 1.</li>
+    <li><b>Current state</b>Both lifts in Block 4 down; one lift in Block 1 out of order; shutdowns across all blocks.</li>
+    <li><b>Safety gaps</b>ARD (rescue device) and door-closing not working properly; no one attends the alarm.</li>
+  </ul>
+
+  <div class="grid">
+    <form class="card" id="form" autocomplete="on">
+      <div class="step">
+        <div class="label">1 · Your flat</div>
+        <div class="led" aria-live="polite">
+          <div class="num" id="flatNum">4111</div>
+          <div class="meta" id="flatMeta">Block 4<br>Floor 11 · Flat 1</div>
+        </div>
+        <div class="count">Block</div>
+        <div class="seg" id="blocks"></div>
+        <div class="count">Floor</div>
+        <div class="floors" id="floors"></div>
+        <div class="count">Flat on floor</div>
+        <div class="seg" id="units"></div>
+      </div>
+
+      <div class="step">
+        <div class="label">2 · Your details</div>
+        <div class="row">
+          <label class="f">Full name<input id="name" name="name" autocomplete="name" placeholder="e.g. Rizwan Ahmed"></label>
+          <label class="f">Mobile<input id="phone" name="tel" autocomplete="tel" inputmode="tel" placeholder="+91 ..."></label>
+        </div>
+        <div class="row">
+          <label class="f">Status
+            <select id="role"><option>Owner</option><option>Tenant</option><option>Family member of allottee</option></select>
+          </label>
+          <label class="f">Which lift
+            <select id="lift"><option>both lifts</option><option>Lift 1</option><option>Lift 2</option></select>
+          </label>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="label">3 · What happened</div>
+        <div class="types" id="types"></div>
+        <div class="row">
+          <label class="f">Date of incident<input type="date" id="date"></label>
+          <label class="f">Time (approx.)<input type="time" id="time"></label>
+        </div>
+        <div class="row" id="stuckRow">
+          <label class="f">Minutes stuck<input id="mins" inputmode="numeric" placeholder="e.g. 25"></label>
+          <label class="f">People inside<input id="ppl" inputmode="numeric" placeholder="e.g. 3"></label>
+        </div>
+        <label class="f"><span><strong style="color:var(--ink)">Your own experience</strong> (in your words, recommended)</span><textarea id="note" rows="4" placeholder="e.g. On 27 Sep my father (78) had a doctor's appointment. Both lifts in Block 4 were down, so we carried him down 11 floors."></textarea></label>
+        <p class="hint">Your own words make each complaint unique and harder to ignore. You can also edit the full letter on the right; do that last, after filling in everything else.</p>
+        <div class="tip"><strong>Attach geotagged photos</strong> of the lift display, stuck car or notice. Turn on location in your camera settings, or use a free "GPS Map Camera" app so the photo shows date, time and address.</div>
+      </div>
+    </form>
+
+    <section class="card out" aria-label="Your letter">
+      <div class="label">4 · Choose who to send to</div>
+      <div class="seg org" id="orgs" style="grid-template-columns:1fr 1fr">
+        <button type="button" class="btn-o" id="org-dda" aria-pressed="true">DDA Electrical</button>
+        <button type="button" class="btn-o" id="org-jl" aria-pressed="false">Johnson Lifts</button>
+      </div>
+      <p class="hint" id="orgHint"></p>
+      <div class="rcpt">
+        <span>To</span><input id="to" placeholder="Recipient email" autocomplete="off">
+        <span>CC</span><input id="cc" placeholder="RWA email, other officers" autocomplete="off">
+        <span>Subject</span><input id="subj" class="subj">
+      </div>
+      <textarea id="body" class="letter" rows="22" aria-label="Letter body"></textarea>
+      <div class="actions">
+        <a class="a primary" id="gmail" href="#" target="_blank" rel="noopener">Send with Gmail</a>
+        <a class="a" id="outlook" href="#" target="_blank" rel="noopener">Outlook</a>
+        <a class="a" id="mailapp" href="#">Phone mail app</a>
+        <button type="button" class="a" id="reword">New wording</button>
+      </div>
+      <div class="copies"><span class="count">Works in any email app:</span>
+        <button type="button" class="a" data-copy="to">Copy To</button>
+        <button type="button" class="a" data-copy="cc">Copy CC</button>
+        <button type="button" class="a" data-copy="subj">Copy Subject</button>
+        <button type="button" class="a" data-copy="body" id="copy">Copy Letter</button>
+      </div>
+      <div class="logbox">
+        <div><strong>After sending, tap Log</strong><br><span class="count">This adds your flat and complaint to the society's count. No name or phone is recorded.</span></div>
+        <a class="a primary" id="logbtn" href="#" target="_blank" rel="noopener">Log my complaint</a>
+      </div>
+      <p class="toast" id="toast"></p>
+      <p class="hint"><strong>Please send both:</strong> after sending to DDA, tap Johnson Lifts above and send again. The letter changes to suit each one.</p>
+      <p class="hint">The send buttons open a new message in your own email with everything filled in. Attach your geotagged photos or videos there before you press Send. If a send button does nothing on your phone, open your email app and use the four Copy buttons to paste To, CC, Subject and Letter.</p>
+      <p class="warn" id="warnTo" hidden>Add the recipient email in "To" before sending.</p>
+    </section>
+  </div>
+</div>
+
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const S={block:4,floor:11,unit:1,type:'stuck',org:'dda',seed:Math.floor(Math.random()*1000)};
+const ORGS={
+ dda:{to:'eeeido1.dda@gmail.com',cc:'see3dda@gmail.com, ce.east@dda.gov.in',
+  hint:'To: Shri Liaqat Hussain, Executive Engineer (Electrical). CC: Superintending Engineer, Electrical Circle-3, and Chief Engineer, East Zone.',
+  addr:'Shri Liaqat Hussain\nExecutive Engineer (Electrical)\nDelhi Development Authority',
+  role:'As the authority responsible for maintaining DDA Housing Pocket 9B, and having collected maintenance charges from every allottee, DDA is responsible for keeping the lifts safe and working.'},
+ jl:{to:'ashwini.sahu@johnsonliftsltd.com',cc:'vignesh@johnsonliftsltd.com, feedback@johnsonliftsltd.com, msr@johnsonliftsltd.com, haridas@johnsonliftsltd.com, mayur.saxena@johnsonliftsltd.com, ce.east@dda.gov.in, eeeido1.dda@gmail.com, jasola9b.rwa@gmail.com',
+  hint:'To: Johnson Lifts (Ashwini Sahu). CC: Johnson Lifts team, DDA Chief Engineer East, DDA Electrical and the RWA.',
+  addr:'Shri Ashwini Sahu\nJohnson Lifts Pvt. Ltd.',
+  role:'As the company that installed the lifts in Pocket 9B and is responsible for their maintenance, Johnson Lifts must make them safe for residents and explain why its safety systems are failing.'}
+};
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const pad=n=>String(n).padStart(2,'0');
+const flat=()=>`${S.block}${pad(S.floor)}${S.unit}`;
+const ord=n=>n+(n%10==1&&n!=11?'st':n%10==2&&n!=12?'nd':n%10==3&&n!=13?'rd':'th');
+const pick=(arr,k=0)=>arr[(S.seed+k)%arr.length];
+
+const TYPES=[
+ {id:'stuck',t:'Got stuck inside the lift',d:'Entrapment; alarm or rescue failed'},
+ {id:'down',t:'Lift not working',d:'Out of order in my block'},
+ {id:'voltage',t:'High voltage / no stabiliser',d:'Ask for servo stabilisers and supply fix'},
+ {id:'senior',t:'Elderly or patient at home',d:'Medical and mobility hardship'},
+ {id:'alarm',t:'Alarm, intercom, no network',d:'Emergency response inside the lift'},
+ {id:'ard',t:'ARD and doors faulty',d:'Rescue device, door closing, levelling'},
+ {id:'inspect',t:'Demand joint inspection',d:'Lift agency, DDA Electrical and RWA on site'},
+ {id:'reminder',t:'Reminder: 2 days, no fix',d:'Escalation for delay'}
+];
+
+// build pickers
+function seg(el,vals,key,fmt){el.innerHTML='';vals.forEach(v=>{const b=document.createElement('button');b.type='button';b.className='btn-o';b.textContent=fmt?fmt(v):v;b.setAttribute('aria-pressed',S[key]==v);b.id=key+'-'+v;b.onclick=()=>{S[key]=v;[...el.children].forEach(c=>c.setAttribute('aria-pressed',c===b));save();render()};el.appendChild(b)})}
+seg($('blocks'),[1,2,3,4],'block',v=>'Block '+v);
+seg($('floors'),Array.from({length:14},(_,i)=>i+1),'floor');
+seg($('units'),[1,2,3,4],'unit',v=>'Flat '+v);
+$('types').innerHTML=TYPES.map(x=>`<label class="type"><input type="radio" name="type" value="${x.id}" id="t-${x.id}" ${x.id==S.type?'checked':''}><div><strong>${x.t}</strong><span>${x.d}</span></div></label>`).join('');
+$('types').addEventListener('change',e=>{S.type=e.target.value;render()});
+
+// defaults
+const now=new Date();
+$('date').value=`${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`;
+['name','phone','role'].forEach(k=>{const v=store.get('lc_'+k);if(v)$(k).value=v});
+function setOrg(o){S.org=o;$('org-dda').setAttribute('aria-pressed',o==='dda');$('org-jl').setAttribute('aria-pressed',o==='jl');
+ $('to').value=ORGS[o].to;$('cc').value=ORGS[o].cc;$('orgHint').textContent=ORGS[o].hint;}
+$('org-dda').onclick=()=>{setOrg('dda');render()};
+$('org-jl').onclick=()=>{setOrg('jl');render()};
+setOrg('dda');
+const sb=store.get('lc_flat');if(sb&&/^[1-4](0[1-9]|1[0-4])[1-4]$/.test(sb)){S.block=+sb[0];S.floor=+sb.slice(1,3);S.unit=+sb[3];
+  seg($('blocks'),[1,2,3,4],'block',v=>'Block '+v);seg($('floors'),Array.from({length:14},(_,i)=>i+1),'floor');seg($('units'),[1,2,3,4],'unit',v=>'Flat '+v);}
+function save(){['name','phone','role'].forEach(k=>store.set('lc_'+k,$(k).value));store.set('lc_flat',flat())}
+
+function fmtDate(v){if(!v)return'today';const d=new Date(v+'T00:00');return d.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'})}
+function fmtTime(v){if(!v)return'';const[h,m]=v.split(':').map(Number);return` at about ${((h+11)%12)+1}:${pad(m)} ${h<12?'am':'pm'}`}
+
+function letter(){
+ const c={name:$('name').value.trim()||'[Your name]',phone:$('phone').value.trim()||'[Mobile]',role:$('role').value,lift:$('lift').value,
+  flat:flat(),block:S.block,floor:S.floor,date:fmtDate($('date').value),time:fmtTime($('time').value),mins:$('mins').value.trim(),ppl:$('ppl').value.trim(),note:$('note').value.trim()};
+ const loc=`Flat ${c.flat}, Block ${c.block} (${ord(c.floor)} floor), DDA Housing Pocket 9B, Jasola, New Delhi`;
+ const which=c.lift==='both lifts'?`both lifts of Block ${c.block}`:`${c.lift} of Block ${c.block}`;
+ const addr=ORGS[S.org].addr;
+ const resp='\n\n'+ORGS[S.org].role;
+ const open=pick([
+  `I am the ${c.role.toLowerCase()} of ${loc}. I am writing to formally complain about the lifts in our tower.`,
+  `I write as the ${c.role.toLowerCase()} of ${loc}, to place on record a serious problem with the lifts.`,
+  `This is a formal complaint from the ${c.role.toLowerCase()} of ${loc}, regarding the lifts that serve our block.`],2);
+ const since=pick([
+  `Since 26 September 2026, lifts in every block of Pocket 9B have been stopping, tripping and trapping people.`,
+  `For the last two days, starting 26 September 2026, the lifts across all four blocks have repeatedly failed.`,
+  `From 26 September 2026 onward, lifts in Pocket 9B have been shutting down without warning in all blocks.`],3);
+ const cause=`The lift operators have told residents that the incoming supply is reaching about 480 V, while the lifts can handle only up to 450 V, and that no servo voltage stabiliser has been provided to protect them.`;
+ const close=pick([
+  `I request a written reply with a firm date by which these issues will be fixed.`,
+  `Please treat this as urgent and inform me in writing of the action taken and the date of completion.`,
+  `I look forward to an early written response and immediate action on site.`],4);
+ const sign=`\n\nYours faithfully,\n\n${c.name}\n${c.role}, Flat ${c.flat}, Block ${c.block}\nDDA Housing Pocket 9B, Jasola, New Delhi\nMobile: ${c.phone}\nDate: ${fmtDate($('date').value)}`;
+ const enc=`\n\nEnclosures: geotagged, date and time-stamped photographs / video of the lift display and condition (attached).`;
+ const extra=(c.note?`\n\nMy own experience:\n${c.note}`:'')+resp;
+ const demands=(list)=>'\n\nI request the following:\n'+list.map((x,i)=>`${i+1}. ${x}`).join('\n');
+ let subj,body;
+ switch(S.type){
+  case 'stuck':{
+   const who=c.ppl?`${c.ppl} ${c.ppl=='1'?'person was':'people were'}`:'we were';
+   const dur=c.mins?`for about ${c.mins} minutes`:'for a long time';
+   subj=pick([`Urgent: Residents trapped in lift, Block ${c.block}, Pocket 9B Jasola (Flat ${c.flat})`,`Lift entrapment on ${c.date}, Block ${c.block}, DDA Pocket 9B Jasola`,`Complaint: people stuck in lift, no rescue, Block ${c.block} Pocket 9B`]);
+   body=`${open}\n\nOn ${c.date}${c.time}, ${who} stuck inside ${c.lift==='both lifts'?'a lift':c.lift} of Block ${c.block} ${dur}. There was no mobile network inside the car, and nobody responded to the lift alarm. We were helped out only because neighbours came to the lift after a family member reached them by the stairs.\n\n${since} ${cause} In the same period a delivery person was also trapped at the 1st floor in Block 1.${extra}${demands([
+    'Immediate inspection of all lifts in Pocket 9B by the lift maintenance agency and DDA Electrical.',
+    'A working Automatic Rescue Device (ARD) in every lift, so a car lands at the nearest floor and opens during a power fault.',
+    'An alarm and intercom that is actually attended 24x7, with a guard or lift operator posted at the ground floor.',
+    'Servo voltage stabilisers or suitable protection for every lift, and correction of the supply voltage with BSES.',
+    'A written report on why the rescue system failed on this date.'])}\n\nBeing trapped in a lift with no network and no response is a direct danger to life. ${close}${enc}${sign}`;break;}
+  case 'down':
+   subj=pick([`Lift not working in Block ${c.block}, DDA Pocket 9B Jasola`,`Complaint: ${which} out of order, Pocket 9B Jasola`,`Non-functional lifts, Block ${c.block}, DDA Housing Pocket 9B`]);
+   body=`${open}\n\nAs of ${c.date}${c.time}, ${which} ${c.lift==='both lifts'?'are':'is'} not working. I live on the ${ord(c.floor)} floor, which means ${c.floor*2} flights of stairs each way for every trip, including groceries, school bags and visitors.\n\n${since} ${cause}${extra}${demands([
+    `Restore ${which} to safe working order at the earliest.`,
+    'Share the fault found and the expected date of repair.',
+    'Provide servo stabilisers or voltage protection so that the lifts do not keep failing.',
+    'Keep a technician from the lift agency on call at the site until the problem is resolved.'])}\n\n${close}${enc}${sign}`;break;
+  case 'voltage':
+   subj=pick([`High voltage damaging lifts, request for servo stabilisers, Pocket 9B Jasola`,`Request: voltage protection for lifts, DDA Housing Pocket 9B Jasola`,`Lift failures due to over-voltage (~480 V), Pocket 9B Jasola`]);
+   body=`${open}\n\n${since} ${cause} We understand there is also a fault in the grid outside the society that BSES is repairing.\n\nThe lifts are building services maintained by DDA. They must be protected from supply problems, whatever the cause outside. Other appliances in homes are working, which shows the lifts in particular lack protection.${extra}${demands([
+    'Install servo voltage stabilisers or over-voltage protection on all lifts in Pocket 9B.',
+    'Take up the supply voltage problem with BSES in writing and share their reply with residents.',
+    'Check the lift controllers and drives for damage caused by over-voltage.',
+    'Confirm whether voltage protection was part of the lift installation specification and the maintenance contract.'])}\n\n${close}${enc}${sign}`;break;
+  case 'senior':
+   subj=pick([`Lift failure putting elderly and patients at risk, Block ${c.block} Pocket 9B`,`Urgent lift repair needed for senior citizens and patients, Pocket 9B Jasola`,`Medical hardship due to lift breakdown, Flat ${c.flat}, Pocket 9B Jasola`]);
+   body=`${open}\n\n${since} ${cause}\n\nMy household on the ${ord(c.floor)} floor includes people who cannot use the stairs. Several families in Pocket 9B care for senior citizens and patients, including a resident on dialysis. If there is a medical emergency while the lifts are down, there is no safe way to bring the person down or to bring a stretcher up.${extra}${demands([
+    'Restore the lifts on priority and keep at least one lift per block working at all times.',
+    'Provide a stretcher-capable lift in working order in each block, as intended.',
+    'Put in place an emergency protocol for residents who cannot use stairs until the fault is fixed.',
+    'Install voltage protection so the lifts stop failing.'])}\n\n${close}${enc}${sign}`;break;
+  case 'alarm':
+   subj=pick([`No response to lift alarm and no network in lift, Pocket 9B Jasola`,`Lift emergency alarm and intercom not attended, Block ${c.block} Pocket 9B`,`Safety complaint: lift alarm unanswered, DDA Pocket 9B Jasola`]);
+   body=`${open}\n\n${since} ${cause}\n\nThe bigger danger is what happens when someone is trapped. On the night of 27–28 September, residents were stuck for about 25 minutes (12:00 to 12:25 am). There was no mobile network in the car and nobody answered the alarm. They were freed only because neighbours heard about it.${extra}${demands([
+    'Make sure the alarm in every lift rings at a point that is manned 24x7.',
+    'Install a working intercom or auto-dialler in each lift car connected to security and the lift agency.',
+    'Display the lift agency\'s emergency number and the security desk number inside every car and on every floor.',
+    'Train guards on safe manual rescue, and keep lift keys at the security desk.'])}\n\n${close}${enc}${sign}`;break;
+  case 'ard':
+   subj=pick([`ARD and door-closing faults in lifts, Pocket 9B Jasola`,`Lift rescue device not working, Block ${c.block} DDA Pocket 9B`,`Complaint: lift safety systems faulty, Pocket 9B Jasola`]);
+   body=`${open}\n\n${since} ${cause}\n\nWhen the lifts stop, the Automatic Rescue Device (ARD) is supposed to bring the car to the nearest floor and open the doors. This is not happening. The door-closing and levelling systems are also not working properly in some lifts.${extra}${demands([
+    'Test the ARD in every lift in Pocket 9B and repair or replace faulty units.',
+    'Repair door-closing and floor levelling in all lifts.',
+    'Share the latest lift safety inspection certificate and the date of the next inspection.',
+    'Share the maintenance log of the last 3 months for the lifts in Block '+c.block+'.'])}\n\n${close}${enc}${sign}`;break;
+  case 'inspect':
+   subj=pick([`Request for joint inspection of lifts, DDA Housing Pocket 9B Jasola`,`Joint site inspection needed: lift failures, Pocket 9B Jasola`,`Lift breakdowns: request joint inspection with lift agency, Pocket 9B`]);
+   body=`${open}\n\n${since} ${cause}\n\nResidents need a clear, technical answer on what is wrong and who is responsible for fixing it.${extra}${demands([
+    'A joint inspection of all lifts by DDA Electrical, the lift maintenance agency and RWA representatives, within 3 days.',
+    'A written report from the lift agency listing faults found and the corrective action with dates.',
+    'A copy of the lift maintenance contract (AMC) terms, including response time for breakdowns and entrapments.',
+    'A written undertaking on responsibility for resident safety until the lifts are made reliable.'])}\n\nResidents are available to meet the officers on site at your convenience. ${close}${enc}${sign}`;break;
+  case 'reminder':
+   subj=pick([`Reminder: lifts still failing after 2 days, Pocket 9B Jasola`,`Escalation: no fix for lift breakdowns since 26 Sep, Pocket 9B`,`Second complaint: lift problems unresolved, Block ${c.block} Pocket 9B Jasola`]);
+   body=`${open}\n\n${since} ${cause} Residents have raised this repeatedly, but as of ${c.date} the problem continues. People have been trapped, and senior citizens are unable to leave their homes.\n\nMaintenance charges have been recovered from every allottee, and lifts are an essential service.${extra}${demands([
+    'Fix the lifts within 48 hours, or state in writing why this is not possible and the revised date.',
+    'Name the officer responsible for this work and share their contact number with residents.',
+    'Provide daily updates to the RWA until the lifts are fully restored.'])}\n\nIf there is no action, residents will have to escalate this further. ${close}${enc}${sign}`;break;
+ }
+ if(S.org==='jl') subj=subj.replace(/DDA Housing Pocket 9B|DDA Pocket 9B/,'Pocket 9B');
+ return {subj, body:`To,\n${addr}\n\nSubject: ${subj}\n\nRespected Sir/Madam,\n\n${body}`};
+}
+
+function render(){
+ $('flatNum').textContent=flat();
+ $('flatMeta').innerHTML=`Block ${S.block}<br>Floor ${pad(S.floor)} · Flat ${S.unit}`;
+ $('stuckRow').hidden=S.type!=='stuck';
+ const L=letter();
+ $('subj').value=L.subj; $('body').value=L.body;
+ links();
+}
+function links(){
+ const to=$('to').value.trim(),cc=$('cc').value.trim(),su=$('subj').value,b=$('body').value;
+ const e=encodeURIComponent;
+ $('gmail').href=`https://mail.google.com/mail/?view=cm&fs=1&to=${e(to)}&cc=${e(cc)}&su=${e(su)}&body=${e(b)}`;
+ $('outlook').href=`https://outlook.live.com/mail/0/deeplink/compose?to=${e(to)}&cc=${e(cc)}&subject=${e(su)}&body=${e(b)}`;
+ $('mailapp').href=`mailto:${to}?cc=${e(cc)}&subject=${e(su)}&body=${e(b)}`;
+ $('warnTo').hidden=!!to;
+ $('logbtn').href=`https://script.google.com/macros/s/AKfycbz-4txwMAB66XZyYaUlZQD2CHiSzEN0eM7yvu7qEOkr7xsLiVKkq_v_7lRomr4gyDk/exec?flat=${flat()}&type=${S.type}&to=${S.org}`;
+}
+['name','phone','role','lift','date','time','mins','ppl','note'].forEach(k=>$(k).addEventListener('input',()=>{save();render()}));
+['to','cc'].forEach(k=>$(k).addEventListener('input',()=>{save();links()}));
+['subj','body'].forEach(k=>$(k).addEventListener('input',links));
+$('reword').onclick=()=>{S.seed++;render();$('toast').textContent='New wording ready.'};
+const NAMES={to:'To addresses',cc:'CC addresses',subj:'Subject',body:'Letter'};
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{const k=b.dataset.copy,el=$(k),t=el.value;
+ const done=()=>$('toast').textContent=`${NAMES[k]} copied. Paste it into your email.`;
+ const fb=()=>{el.focus();el.select();$('toast').textContent=`${NAMES[k]} selected. Long-press or press Ctrl+C to copy.`};
+ try{navigator.clipboard.writeText(t).then(done,fb)}catch(e){fb()}});
+render();
+})();
+</script>
+
+</body></html>
